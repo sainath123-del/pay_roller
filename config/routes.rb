@@ -1,3 +1,13 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+ 
+  root 'emplyoees#index'
+  get '/employees', to: 'employees#show'
+  post '/employees/:id', to: 'employee#create'
+  get '/salaries', to: 'salaries#show'
+  post '/salaries', to: 'salaries#create'
+  get '/shift', to: 'shift#show'
+  post '/shift', to: 'shift#create'
+
+
+
 end
